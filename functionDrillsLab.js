@@ -17,6 +17,7 @@ function helloWorld(){
 }
 
 
+
 ////////////////// PROBLEM 2 ////////////////////
 
 /*
@@ -24,7 +25,10 @@ function helloWorld(){
 */
 
 //CODE HERE
-
+const jsNinja = () => {
+  return 'I am a Javascript ninja!';
+}
+jsNinja();
 
 ////////////////// PROBLEM 3 ////////////////////
 /*
@@ -34,7 +38,10 @@ function helloWorld(){
 */
 
 //CODE HERE
-
+printName = name => {
+  console.log(`${name} was here`);
+}
+printName('Korey');
 
 ////////////////// PROBLEM 4 ////////////////////
 /*
@@ -47,7 +54,10 @@ function helloWorld(){
 */
 
 //CODE HERE
-
+greeting = name => {
+  console.log(`Hello ${name}`)
+}
+greeting('Dwight');
 
 ////////////////// PROBLEM 5 ////////////////////
 
@@ -61,7 +71,10 @@ function helloWorld(){
 */
 
 //CODE HERE
-
+compareNums = (num1, num2) => {
+ return (num1 > num2 ? `num 1: ${num1}` : `num 2:${num2} `)
+}
+console.log(compareNums(1, 0))
 
 ////////////////// PROBLEM 6 ////////////////////
 /*
@@ -72,6 +85,9 @@ function helloWorld(){
 */
 
 //CODE HERE
+add = (para1, para2) => {
+
+}
 
 
 ////////////////// PROBLEM 7 ////////////////////
@@ -85,9 +101,16 @@ const exclaim = function(str) {
   return str.toUpperCase() + '!!!'
 }
 
-// console.log('arrow')
-// console.log('declaration')
-// console.log('expression')
+/* console.log('arrow')
+exclaim = str => {
+  return str.toUpperCase() + '!!!'
+}*/
+/* console.log('declaration')
+function exclaim(){
+  return str.toUpperCase()+ '!!!
+}
+*/
+ console.log('expression')
 
 
 
@@ -98,11 +121,11 @@ const exclaim = function(str) {
   Uncomment the correct `console.log` underneath.
 */
 
-const exclaimTwo = str => {
-  return str.toUpperCase() + '!!!'
-}
+//const exclaimTwo = str => {
+  //return str.toUpperCase() + '!!!'
+//}
 
-// console.log('arrow')
+ console.log('arrow')
 // console.log('declaration')
 // console.log('expression')
 
@@ -112,7 +135,10 @@ const exclaimTwo = str => {
 
   Brownie points if you use a template string
 */
+//CODE
+ exclaimTwo = str =>  str.toUpperCase() + '!!!'
 
+console.log(exclaimTwo('bob'));
 
 
 ////////////////// PROBLEM 9 ////////////////////
@@ -127,7 +153,7 @@ function exclaimFour(str) {
 }
 
 // console.log('arrow')
-// console.log('declaration')
+console.log('declaration')
 // console.log('expression')
 
 
@@ -141,6 +167,17 @@ function exclaimFour(str) {
 */
 
 //CODE HERE
+nameCheck = name => {
+  if(name === 'Steven'){
+    return 'What is up Steven?'
+  } else if (name === 'Bryan'){
+    return 'Hey Bryan'
+  } else {
+    return `cool name, ${name}`
+  }
+}
+let nameGreeting = nameCheck('Korey');
+console.log(nameGreeting);
 
 
 ////////////////// PROBLEM 11 ////////////////////
@@ -154,7 +191,19 @@ function exclaimFour(str) {
 */
 
 //CODE HERE
-
+faveColorFinder = color => {
+  if( color === 'red'){
+    return 'Red is a great color'
+  } else if (color === 'green'){
+    return 'Green is a solid favorite color'
+  } else if (color === 'black'){
+    return 'so trendy'
+  } else {
+    return 'you need to evaluate your favorite color choice'
+  }
+}
+let colorRating = faveColorFinder('red');
+console.log(colorRating);
 
 ////////////////// PROBLEM 12 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
@@ -165,6 +214,12 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+printAllNames = para => {
+  for (let i = 0; i < namesArr.length; i++){
+    console.log(namesArr[i]);
+  }
+}
+printAllNames(namesArr);
 
 
 ////////////////// PROBLEM 13 ////////////////////
@@ -176,7 +231,15 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
-
+thatsOdd = num => {
+  if (num % 2 === 0){
+    return 'Thats not odd!'
+  } else {
+    return 'That is odd indeed'
+  }
+}
+const oddChecker = thatsOdd(6);
+console.log(oddChecker);
 
 ////////////////// PROBLEM 14 ////////////////////
 
@@ -189,7 +252,9 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+bestMovie = title =>  `${title} is the best moive ever!`
 
+console.log(bestMovie('Dont Be A Menace to South Central While Drinking Your Juice in The Hood'))
 
 ////////////////// PROBLEM 15 ////////////////////
 let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
@@ -202,9 +267,19 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
   Return the answers array inside of the function to a variable called `arrayEvaluator`.
 */
 
-//CODE HERE
-
-
+//CODE HERE 
+bigOrSmall = arr => {
+  for(let i = 0; i < bigOrSmallArray.length; i++){
+    let answers = []
+ if(bigOrSmallArray[i] > 100){
+ answers.push('big')
+ } else {
+  answers.push('smalls')
+ }
+ return arrayEvalutor = answers
+}
+  }
+  
 ////////////////// PROBLEM 16 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
 let loser = 'Glimmer'
@@ -214,7 +289,9 @@ let loser = 'Glimmer'
 */
 
 //CODE HERE
+theEliminator = (pers1, pers2) => {
 
+}
 
 ////////////////// PROBLEM 17 ////////////////////
 let sampleString = "Hi, my name is Kylo."
@@ -285,13 +362,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = ['cute']
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = ['squeaky']
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = ['nautical']
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = ['fluffy']
