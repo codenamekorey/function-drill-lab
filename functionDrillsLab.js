@@ -343,8 +343,12 @@ console.log(emailCheck('1234@gmail.com '));
 
 //CODE HERE
 purchased = gold => {
- 
+let chocolateFrogs = 3;
+ chocolateFrogs =  gold / chocolateFrogs;
+ console.log(Math.floor(chocolateFrogs))
+
 }
+let totalFrogs = purchased(30);
 
 ////////////////// PROBLEM 20 ////////////////////
 /*
